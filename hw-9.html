@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function Shape(name, sides){
+    this.name = name;
+    this.sides = sides;
+}
+
+
+
+function Rectangle(height, width, name, sides){
+   this.height = height;
+   this.width = width;   
+    Shapes.call(this, name, sides)
+}
+Rectangle.prototype = Object.create(Shape.prototype);
+
+Rectangle.prototype.area = function(){
+    console.log(this.height*this.width);
+}
+Rectangle.prototype.perimeter = function(){
+    console.log(this.height*2 +this.width*2);
+}
+
+
+
+function Square(height, height, name, sides){
+    Rectangle.call(this, height, height, name, sides);
+}
+
+Rectangle.prototype = Object.create(Shape.prototype);
+
+
+    </script>
+</body>
+</html>
